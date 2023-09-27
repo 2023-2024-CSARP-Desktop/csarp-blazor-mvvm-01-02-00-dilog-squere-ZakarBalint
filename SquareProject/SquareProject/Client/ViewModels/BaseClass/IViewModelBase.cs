@@ -2,7 +2,7 @@
 
 namespace ViewModels.BaseClass
 {
-    public interface IViewModelBase
+    public interface IViewModelBase : INotifyPropertyChanged
     {
         public bool IsBusy { get; set; }
         public event PropertyChangedEventHandler PropertyChanged;

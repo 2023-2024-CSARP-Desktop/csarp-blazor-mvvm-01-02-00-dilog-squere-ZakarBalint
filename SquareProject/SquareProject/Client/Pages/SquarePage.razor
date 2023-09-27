@@ -1,11 +1,19 @@
 ﻿@page "/square"
 
 @using global::Pages.BaseClass;
+@using SquareProject.Client.ViewModels;
+@using SquareProject.Client.Components
 
 @inherits BasePage
 
 <h3>Négyzet terület és került számítás</h3>
 
-@code {
+<CascadingValue Value="@ViewModel" Name="ViewModel">
+    <EditSquareData />
+    <ShowSquareResult />
+</CascadingValue>
 
+@code {
+    [Inject]
+    public ISquareViewModel? ViewModel { get; set; }
 }

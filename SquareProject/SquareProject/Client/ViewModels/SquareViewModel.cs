@@ -29,6 +29,7 @@ namespace SquareProject.Client.ViewModels
                 catch (Exception e)
                 {
                 }
+                OnPropertyChanged(nameof(Side));
             }
         }
 
